@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "178546be-019c-4a75-8ddd-0e5886ec4a42",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37263011"
+	},
+	"item": [
+		{
+			"name": "cats",
+			"item": [
+				{
+					"name": "create cat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hello\",\r\n    \"breed\":\"Abyssinian\",\r\n    \"salary\":123.3   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cat by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hello\",\r\n    \"breed\":\"Abyssinian\",\r\n    \"salary\":123.3   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cats/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cats",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete cat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hello\",\r\n    \"breed\":\"Abyssinian\",\r\n    \"salary\":123.3   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cats/de903a9e-04c6-4d13-805e-7da4418bdcd1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cats",
+								"de903a9e-04c6-4d13-805e-7da4418bdcd1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Salalry",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hello\",\r\n    \"breed\":\"Abyssinian\",\r\n    \"salary\":123.3   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cats/de903a9e-04c6-4d13-805e-7da4418bdcd1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cats",
+								"de903a9e-04c6-4d13-805e-7da4418bdcd1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all cats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hello\",\r\n    \"breed\":\"Abyssinian\",\r\n    \"salary\":123.3   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "missions",
+			"item": [
+				{
+					"name": "Create mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"targets\":[\r\n        {\r\n            \"name\":\"hello\",\r\n            \"country\":\"world\",\r\n            \"notes\":\"hello world\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all missions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"targets\":[\r\n        {\r\n            \"name\":\"hello\",\r\n            \"country\":\"world\",\r\n            \"notes\":\"hello world\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/missions?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"missions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get mission by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"targets\":[\r\n        {\r\n            \"name\":\"hello\",\r\n            \"country\":\"world\",\r\n            \"notes\":\"hello world\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/missions/a88761e0-fdae-4d46-b20d-269791c2b44c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"missions",
+								"a88761e0-fdae-4d46-b20d-269791c2b44c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update mission status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/missions/a88761e0-fdae-4d46-b20d-269791c2b44c/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"missions",
+								"a88761e0-fdae-4d46-b20d-269791c2b44c",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update mission cat",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cat_id\":\"e5e123bd-464c-43e6-958d-6a0eab339eeb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/missions/a88761e0-fdae-4d46-b20d-269791c2b44c/assign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"missions",
+								"a88761e0-fdae-4d46-b20d-269791c2b44c",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete mission",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cat_id\":\"e5e123bd-464c-43e6-958d-6a0eab339eeb\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/missions/a88761e0-fdae-4d46-b20d-269791c2b44c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"missions",
+								"a88761e0-fdae-4d46-b20d-269791c2b44c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "targets",
+			"item": [
+				{
+					"name": "Create target",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hello\",\r\n    \"country\": \"world\",\r\n    \"notes\": \"hello world\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/targets/a9765e32-0a34-47d1-8fb4-db6a23fc12c1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"targets",
+								"a9765e32-0a34-47d1-8fb4-db6a23fc12c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/targets/74356acb-c314-4994-996b-bf9cf01df3e0/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"targets",
+								"74356acb-c314-4994-996b-bf9cf01df3e0",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update notes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notes\":\"1232132131321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/targets/871f170a-989b-42f7-adb2-46086653bd22/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"targets",
+								"871f170a-989b-42f7-adb2-46086653bd22",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete target",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notes\":\"1232132131321\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/targets/871f170a-989b-42f7-adb2-46086653bd22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"targets",
+								"871f170a-989b-42f7-adb2-46086653bd22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
