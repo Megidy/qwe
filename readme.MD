@@ -23,3 +23,5 @@ or
 docker-compose up --build -d
 ```
 
+
+Project documentation is available in the docs/ folder.
